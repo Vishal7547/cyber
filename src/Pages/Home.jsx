@@ -2,13 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 const Home = () => {
   return (
-    <div style={{ height: "90vh", width: "100%" }} className="bg-dark">
+    <div style={{ height: "100%", width: "100%" }} className="bg-dark py-5">
       <div className="container">
         <div className="row">
           <h1 className="text-light mt-5">CyberSecurity Initiatives</h1>
         </div>
         <div className="row mt-5">
-          <div className="col-md-4">
+          <div className="col-md-4 my-2">
             <Link to="/secureCommunication">
               <div className="card">
                 <img
@@ -27,7 +27,7 @@ const Home = () => {
             </Link>
           </div>
 
-          <div className="col-md-4">
+          <div className="col-md-4 my-2">
             <Link to="/intrusionDetection">
               <div className="card">
                 <img
@@ -47,7 +47,7 @@ const Home = () => {
             </Link>
           </div>
 
-          <div className="col-md-4">
+          <div className="col-md-4 my-2">
             <Link to="/dashboard">
               <div className="card">
                 <img
