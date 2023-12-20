@@ -8,7 +8,7 @@ const Auth = ({ userRole, onUserRoleChange }) => {
     if (userRole === "admin") {
       // For illustration, grant full authority to the admin
       setIsAuthorized(true);
-      navigate("/dashboard");
+      navigate("/dashboard/admin");
     } else if (userRole === "user") {
       // For illustration, grant limited authority to regular users
       navigate("/dashboard/user");

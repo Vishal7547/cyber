@@ -13,6 +13,9 @@ import Report from "./Pages/User/Report";
 import Power from "./Pages/User/Power";
 import Setting from "./Pages/User/Setting";
 import UserProfile from "./Pages/User/UserProfile";
+
+import AdminDashboard from "./Pages/AdminDashboard";
+import AdminReport from "./Pages/AdminReport";
 function App() {
   const [encryptedMessage, setEncryptedMessage] = useState("");
   const [userRole, setUserRole] = useState("user");
@@ -24,7 +27,12 @@ function App() {
       <BrowserRouter>
         <Header userRole={userRole} setUserRole={setUserRole} />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route
+            path="/"
+            element={
+              <Home userRole={userRole} onUserRoleChange={setUserRole} />
+            }
+          />
           <Route
             path="/dashboard"
             element={
@@ -52,6 +60,8 @@ function App() {
           <Route path="/dashboard/power" element={<Power />} />
           <Route path="/dashboard/setting" element={<Setting />} />
           <Route path="/dashboard/profile" element={<UserProfile />} />
+          <Route path="/dashboard/admin" element={<AdminDashboard />} />
+          <Route path="/dashboard/admin/report " element={<AdminReport />} />
 
           <Route
             path="/secureCommunication"
