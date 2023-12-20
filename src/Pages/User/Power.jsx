@@ -39,8 +39,9 @@ const Power = () => {
                           <b> 📞 9798517945</b>
                         </p>
                         <p>
-                          <b>Limit:100W</b>
+                          <b>Limit:1000KW/H</b>
                         </p>
+                        <div className="btn btn-danger">Power Cut</div>
                       </div>
                     </div>
                   </div>
@@ -62,8 +63,9 @@ const Power = () => {
                           <b> 📞 9798517945</b>
                         </p>
                         <p>
-                          <b>Limit:100W</b>
+                          <b>Limit:1000KW/H</b>
                         </p>
+                        <div className="btn btn-danger">Power Cut</div>
                       </div>
                     </div>
                   </div>
@@ -77,7 +79,7 @@ const Power = () => {
                           width={100}
                         />
                       </div>
-                      <div className="col-md-6">
+                      <div className="col-md-6 text-justify">
                         <p>
                           <b> Yash Choudhary</b>
                         </p>
@@ -85,8 +87,9 @@ const Power = () => {
                           <b> 📞 9798517945</b>
                         </p>
                         <p>
-                          <b>Limit:100W</b>
+                          <b>Limit:1000KW/H</b>
                         </p>
+                        <div className="btn btn-danger">Power Cut</div>
                       </div>
                     </div>
                   </div>
