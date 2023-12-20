@@ -35,8 +35,6 @@ function App() {
             }
           />
 
-          <Route path="/admin" element={<Admin />} />
-
           <Route
             path="/dashboard"
             element={
@@ -54,6 +52,15 @@ function App() {
             }
           />
           <Route
+            path="/admin"
+            element={
+              <PrivateRoute>
+                <Admin />
+              </PrivateRoute>
+            }
+          />
+
+          <Route
             path="/auth"
             element={
               <Auth userRole={userRole} onUserRoleChange={setUserRole} />
@@ -69,15 +76,21 @@ function App() {
           <Route
             path="/secureCommunication"
             element={
-              <SecureCommunication
-                encryptedMessage={encryptedMessage}
-                setEncryptedMessage={setEncryptedMessage}
-              />
+              <PrivateRoute>
+                <SecureCommunication
+                  encryptedMessage={encryptedMessage}
+                  setEncryptedMessage={setEncryptedMessage}
+                />
+              </PrivateRoute>
             }
           />
           <Route
             path="/intrusionDetection"
-            element={<IntrusionDetection encryptedMessage={encryptedMessage} />}
+            element={
+              <PrivateRoute>
+                <IntrusionDetection encryptedMessage={encryptedMessage} />
+              </PrivateRoute>
+            }
           />
         </Routes>
       </BrowserRouter>
