@@ -8,6 +8,11 @@ import Auth from "./components/Auth";
 import Dashboard from "./components/Dashboard";
 import { Navigate } from "react-router-dom";
 import Pid from "./Pages/Pid";
+import UserDashboard from "./Pages/User/UserDashboard";
+import Report from "./Pages/User/Report";
+import Power from "./Pages/User/Power";
+import Setting from "./Pages/User/Setting";
+import UserProfile from "./Pages/User/UserProfile";
 function App() {
   const [encryptedMessage, setEncryptedMessage] = useState("");
   const [userRole, setUserRole] = useState("user");
@@ -24,7 +29,7 @@ function App() {
             path="/dashboard"
             element={
               <PrivateRoute>
-                <Dashboard isAdmin={userRole === "admin"} />
+                <Dashboard isAdmin={userRole} />
               </PrivateRoute>
             }
           />
@@ -42,6 +47,11 @@ function App() {
               <Auth userRole={userRole} onUserRoleChange={setUserRole} />
             }
           />
+          <Route path="/dashboard/user" element={<UserDashboard />} />
+          <Route path="/dashboard/report" element={<Report />} />
+          <Route path="/dashboard/power" element={<Power />} />
+          <Route path="/dashboard/setting" element={<Setting />} />
+          <Route path="/dashboard/profile" element={<UserProfile />} />
 
           <Route
             path="/secureCommunication"
