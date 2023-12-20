@@ -7,6 +7,7 @@ import IntrusionDetection from "./components/IntrusionDetection";
 import Auth from "./components/Auth";
 import Dashboard from "./components/Dashboard";
 import { Navigate } from "react-router-dom";
+import Pid from "./Pages/Pid";
 function App() {
   const [encryptedMessage, setEncryptedMessage] = useState("");
   const [userRole, setUserRole] = useState("user");
@@ -24,6 +25,7 @@ function App() {
             element={
               <PrivateRoute>
                 <Dashboard isAdmin={userRole === "admin"} />
+                <Pid />
               </PrivateRoute>
             }
           />

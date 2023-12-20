@@ -1,25 +1,7 @@
 import React from "react";
-
+import { useNavigate } from "react-router-dom";
 const Dashboard = ({ isAdmin }) => {
-  const handleModifySolarPanelSettings = () => {
-    if (isAdmin) {
-      // Simulate modifying solar panel settings (e.g., API call, state update)
-      console.log("Solar panel settings modified by admin.");
-    } else {
-      console.log(
-        "Access denied. Only admins can modify solar panel settings."
-      );
-    }
-  };
-
-  const handleModifyBatterySettings = () => {
-    if (isAdmin) {
-      // Simulate modifying battery settings (e.g., API call, state update)
-      console.log("Battery settings modified by admin.");
-    } else {
-      console.log("Access denied. Only admins can modify battery settings.");
-    }
-  };
+  const navigate = useNavigate();
 
   return (
     <div
@@ -27,12 +9,10 @@ const Dashboard = ({ isAdmin }) => {
       className="bg-dark d-flex justify-content-center align-items-center flex-column"
     >
       <h2 className="text-light mt-2">Microgrid Configuration</h2>
-      <button onClick={handleModifySolarPanelSettings} className="my-3">
-        Modify Solar Panel Settings
+      <button onClick={() => navigate("/pid")} className="my-3">
+        Modify PID Settings
       </button>
-      <button onClick={handleModifyBatterySettings}>
-        Modify Battery Settings
-      </button>
+      <button>Modify Battery Settings</button>
     </div>
   );
 };
