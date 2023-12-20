@@ -35,14 +35,14 @@ function App() {
             }
           />
 
-          <Route
+          {/* <Route
             path="/dashboard"
             element={
               <PrivateRoute>
                 <Dashboard isAdmin={userRole} />
               </PrivateRoute>
             }
-          />
+          /> */}
           <Route
             path="/pid"
             element={
@@ -66,6 +66,7 @@ function App() {
               <Auth userRole={userRole} onUserRoleChange={setUserRole} />
             }
           />
+
           <Route path="/dashboard/user" element={<UserDashboard />} />
           <Route path="/dashboard/report" element={<Report />} />
           <Route path="/dashboard/power" element={<Power />} />
