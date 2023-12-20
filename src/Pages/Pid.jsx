@@ -7,21 +7,21 @@ const Pid = () => {
   const [kd, setKd] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (kp < 1 || kp > 2) {
+    if (kp < 1 || kp > 2 || kp === "") {
       Swal.fire({
         icon: "error",
         title: "Oops...",
         text: "KP value should between 1 to 2",
       });
       return;
-    } else if (ki < 1 || ki > 2) {
+    } else if (ki < 1 || ki > 2 || ki === "") {
       Swal.fire({
         icon: "error",
         title: "Oops...",
         text: "KI value should between 1 to 2",
       });
       return;
-    } else if (kd < 1 || kd > 2) {
+    } else if (kd < 1 || kd > 2 || kd === "") {
       Swal.fire({
         icon: "error",
         title: "Oops...",
