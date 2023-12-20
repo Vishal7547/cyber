@@ -14,7 +14,7 @@ const AdminMenu = () => {
             Dashboard
           </NavLink>
           <NavLink
-            to="/dashboard/admin/report"
+            to="/admin"
             className="list-group-item list-group-item-action text-dark"
           >
             Report

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Navigate } from "react-router-dom";
 const Auth = ({ userRole, onUserRoleChange }) => {
   const [isAuthorized, setIsAuthorized] = useState(false);
   const navigate = useNavigate();
@@ -7,8 +7,10 @@ const Auth = ({ userRole, onUserRoleChange }) => {
     // Simulate checking user role for authorization (replace with actual implementation)
     if (userRole === "admin") {
       // For illustration, grant full authority to the admin
-      setIsAuthorized(true);
-      navigate("/dashboard/admin");
+      // setIsAuthorized(true);
+      // navigate("/dashboard/admin");
+      window.location.href = "http://localhost:3001/dashboard/admin";
+      // <Navigate to="/dashboard/admin" />;
     } else if (userRole === "user") {
       // For illustration, grant limited authority to regular users
       navigate("/dashboard/user");
