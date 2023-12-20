@@ -25,11 +25,17 @@ function App() {
             element={
               <PrivateRoute>
                 <Dashboard isAdmin={userRole === "admin"} />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/pid"
+            element={
+              <PrivateRoute>
                 <Pid />
               </PrivateRoute>
             }
           />
-
           <Route
             path="/auth"
             element={
